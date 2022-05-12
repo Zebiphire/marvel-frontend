@@ -1,0 +1,19 @@
+.containerCharacters {
+  border: blue 1px solid;
+  display: flex;
+  flex-direction: column;
+}
+
+.character {
+  border: red 1px solid;
+}
+
+.wrapCharacters {
+  flex-wrap: wrap;
+  width: 25%;
+  border: cyan 1px solid;
+}
+
+.wrapCharacters > img {
+  width: 100%;
+}
