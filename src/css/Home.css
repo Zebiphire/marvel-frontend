@@ -1,0 +1,17 @@
+.searchBar {
+  display: flex;
+  flex-direction: column;
+}
+
+.containerHome {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  border: cyan 1px solid;
+}
+
+.character {
+  border: red 3px solid;
+  display: flex;
+  flex-direction: column;
+}

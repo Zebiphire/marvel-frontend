@@ -1,18 +1,13 @@
-import { useParams, useNavigate, Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../css/ButtonFavorite.css";
-
 import "../css/SpecificCharacter.css";
 
 const SpecificCharacter = ({ token }) => {
   const { id } = useParams();
   const [character, setCharacter] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  // const [idFavorite, setIdFavorite] = useState("");
-  // const [categoryFavorite, setCategoryFavorite] = useState("");
-
-  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,11 +19,6 @@ const SpecificCharacter = ({ token }) => {
     };
     fetchData();
   }, [id]);
-
-  // const setFavorite = (id, category) => {
-  //   setIdFavorite(id);
-  //   setCategoryFavorite(category);
-  // };
 
   const SendFavorite = async (id, categoryFavorite) => {
     if (
@@ -74,7 +64,6 @@ const SpecificCharacter = ({ token }) => {
       <h1>{character.name}</h1>
       <button
         class="button-82-pushable"
-        role="button"
         onClick={async () => {
           SendFavorite(id, "character");
         }}

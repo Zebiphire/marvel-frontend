@@ -8,7 +8,7 @@ const Search = ({ setSearch, results }) => {
   const bar = useRef();
 
   const handleSearch = (event) => {
-    console.log("results ===");
+    console.log("handleSearch ===");
     console.log(results);
     console.log(event.target.value);
     setSearch(event.target.value);

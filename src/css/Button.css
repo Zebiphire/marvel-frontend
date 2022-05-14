@@ -1,15 +1,17 @@
 .button-49,
 .button-49:after {
-  width: 150px;
-  height: 76px;
+  width: 140px;
+  height: 66px;
   line-height: 78px;
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: 900;
   font-family: "Bebas Neue", sans-serif;
-  background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
+  background: linear-gradient(45deg, transparent 5%, white 5%);
   border: 0;
-  color: #fff;
+  color: #f8f005;
   letter-spacing: 3px;
-  box-shadow: 6px 0px 0px #00e6f6;
+  /* box-shadow: 6px 0px 0px #00e6f6; */
+  box-shadow: 6px 0px 0px #f8f005;
   outline: transparent;
   position: relative;
   user-select: none;
@@ -35,8 +37,9 @@
   background: linear-gradient(
     45deg,
     transparent 3%,
-    #00e6f6 3%,
-    #00e6f6 5%,
+    /* #00e6f6 3%,
+    #00e6f6 5%, */ #f8f005 3%,
+    #f8f005 5%,
     #ff013c 5%
   );
   text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
@@ -46,6 +49,10 @@
 .button-49:hover:after {
   animation: 1s glitch;
   animation-timing-function: steps(2, end);
+}
+
+.button-49:hover {
+  cursor: pointer;
 }
 
 @keyframes glitch {

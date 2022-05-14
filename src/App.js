@@ -22,8 +22,7 @@ function App() {
   const [data, setData] = useState([]);
   const [token, setToken] = useState(Cookies.get("token") || null);
   const [search, setSearch] = useState("");
-  const [favorite, setFavorite] = useState("");
-  const [limit, setLimit] = useState(100);
+  const limit = 100;
   const [page, setPage] = useState(1);
 
   const setUser = (token) => {

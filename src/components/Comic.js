@@ -1,10 +1,7 @@
-import { useNavigate } from "react-router-dom";
 import "../css/ButtonFavorite.css";
 import axios from "axios";
 
 const Comics = ({ data, token }) => {
-  let navigate = useNavigate();
-
   const SendFavorite = async (id, categoryFavorite) => {
     console.log(id);
     if (
@@ -48,7 +45,6 @@ const Comics = ({ data, token }) => {
       />
       <button
         class="button-82-pushable"
-        role="button"
         onClick={async () => {
           SendFavorite(data._id, "comics");
         }}

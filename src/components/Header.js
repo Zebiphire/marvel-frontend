@@ -46,12 +46,14 @@ const Header = ({ token, setUser }) => {
             </button>
           ) : null}
         </div>
-        <p className="titleButton">What is your favorite character/comics?</p>
+        <p className="titleButton">
+          What is your favorite character or comics?
+        </p>
         <div className="buttons">
           {token ? (
-            <div className="buttonSign">
+            <div className="buttonSign signCol">
               <button
-                className="buttonSignOut"
+                className="button-49"
                 onClick={() => {
                   setUser(null);
                 }}
@@ -62,7 +64,7 @@ const Header = ({ token, setUser }) => {
           ) : (
             <div className="buttonSign">
               <button
-                className="signinButton"
+                className="button-49 signCol"
                 onClick={() => {
                   navigate("/signin");
                 }}
@@ -70,7 +72,7 @@ const Header = ({ token, setUser }) => {
                 Sign-In
               </button>
               <button
-                className="signupButton"
+                className="button-49 signCol"
                 onClick={() => {
                   navigate("/signup");
                 }}

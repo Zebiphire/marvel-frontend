@@ -2,26 +2,33 @@ header {
   width: 100%;
   display: flex;
   flex-direction: row;
-  border: yellow 1px solid;
+  align-items: center;
+  align-content: center;
 }
 
 .header {
   background-color: #ed1c24;
-  color: white;
+  color: #f8f005;
+  font-weight: 100;
+}
+
+.header .button-49 {
+  width: 150px;
+  height: 85px;
+  margin: 0 10px 0 10px;
 }
 
 .logoHeader {
   width: 250px;
   height: 100px;
-  padding: 15px;
-  flex: 2;
+  flex: 1;
+  cursor: pointer;
 }
 
 .divButton {
   display: flex;
   flex-direction: row;
   flex: 3;
-  border: blue 1px solid;
   align-items: center;
   align-content: center;
   margin: 10px;
@@ -47,10 +54,9 @@ header {
 }
 
 .titleButton {
-  flex: 5;
+  flex: 4;
   align-items: center;
   align-content: center;
-  border: blue 1px solid;
   font-size: 30px;
   font-weight: bold;
   display: flex;
@@ -61,21 +67,30 @@ header {
 
 .buttons {
   flex: 2;
-  border: green 1px solid;
+  margin-right: 10px;
 }
 
 .buttonSign {
   flex: 2;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.signCol {
+  margin: 10px 0 10px 0 !important;
+  width: 120px !important;
 }
 
 .signupButton {
   flex: 1;
+  margin: 10px 0 10px 0;
 }
 
 .signinButton {
   flex: 1;
+  margin: 10px 0 10px 0;
 }
 
 .buttonSignOut {

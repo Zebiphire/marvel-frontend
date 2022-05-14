@@ -1,8 +1,8 @@
 .search {
   position: relative;
   display: flex;
-  flex-direction: row;
-  flex: 4;
+  flex-direction: column;
+  margin: 10px;
 }
 
 .inputSearch {
@@ -13,6 +13,12 @@
   height: 37px;
   border: none;
   font-size: 16px;
+}
+
+.autocomplete {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
 }
 
 .inputSearch::placeholder {

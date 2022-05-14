@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Lottie from "react-lottie";
+import animationData from "../assets/lotties/iron_man.json";
 import axios from "axios";
 
 import "../css/SignIn.css";
@@ -11,6 +13,15 @@ const SignIn = ({ setUser }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const navigate = useNavigate();
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
   const handleSubmit = async (event) => {
     try {
@@ -77,6 +88,9 @@ const SignIn = ({ setUser }) => {
           Problem ?
         </Link>
       </form>
+      <div>
+        <Lottie options={defaultOptions} height={600} width={400} />
+      </div>
     </div>
   );
 };
