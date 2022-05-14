@@ -24,7 +24,7 @@ const Favorites = ({ token }) => {
       setIsLoading(false);
     };
     fetchData();
-  }, []);
+  }, [token]);
 
   const refreshPage = () => {
     window.location.reload();
@@ -53,7 +53,9 @@ const Favorites = ({ token }) => {
             },
           }
         );
-        refreshPage();
+        if (response) {
+          refreshPage();
+        }
       } catch (error) {
         console.log(error);
         setIsLoading(false);
