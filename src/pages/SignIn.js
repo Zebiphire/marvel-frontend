@@ -24,9 +24,8 @@ const SignIn = ({ setUser }) => {
           password: password,
         }
       );
-      if (response.data.token) {
-        console.log(response.data.token);
-        setUser(response.data.token);
+      if (response.data.user.token) {
+        setUser(response.data.user.token);
         setIsLoading(false);
         navigate("/");
       } else {

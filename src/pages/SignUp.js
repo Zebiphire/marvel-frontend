@@ -22,9 +22,9 @@ const SignUp = ({ setUser }) => {
           username: username,
         }
       );
-      if (response.data.token) {
-        console.log(response.data.token);
-        setUser(response.data.token);
+      console.log(response.data);
+      if (response.data.newUser.token) {
+        setUser(response.data.newUser.token);
         navigate("/");
       } else {
         setErrorMessage("Une erreur est survenue, veuillez réssayer.");

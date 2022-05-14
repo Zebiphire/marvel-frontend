@@ -19,8 +19,13 @@ header {
 
 .divButton {
   display: flex;
-  flex-direction: column;
-  flex: 2;
+  flex-direction: row;
+  flex: 3;
+  border: blue 1px solid;
+  align-items: center;
+  align-content: center;
+  margin: 10px;
+  padding: 10px;
 }
 
 .charactersButton {
@@ -54,10 +59,25 @@ header {
   justify-content: center;
 }
 
-.signinButton {
-  flex: 1;
+.buttons {
+  flex: 2;
+  border: green 1px solid;
+}
+
+.buttonSign {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
 }
 
 .signupButton {
   flex: 1;
+}
+
+.signinButton {
+  flex: 1;
+}
+
+.buttonSignOut {
+  flex: 2;
 }

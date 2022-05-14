@@ -3,7 +3,7 @@ import "../css/Header.css";
 import LogoSvg from "../assets/img/marvel.svg";
 import "../css/Button.css";
 
-const Header = () => {
+const Header = ({ token, setUser }) => {
   const navigate = useNavigate();
 
   return (
@@ -19,7 +19,8 @@ const Header = () => {
         />
         <div className="divButton">
           <button
-            className="charactersButton"
+            // className="charactersButton"
+            className="button-49"
             onClick={() => {
               navigate("/");
             }}
@@ -34,24 +35,51 @@ const Header = () => {
           >
             Comics
           </button>
+          {token ? (
+            <button
+              className="button-49"
+              onClick={() => {
+                navigate("/favorites");
+              }}
+            >
+              Favorites
+            </button>
+          ) : null}
         </div>
         <p className="titleButton">What is your favorite character/comics?</p>
-        <button
-          className="signinButton"
-          onClick={() => {
-            navigate("/signin");
-          }}
-        >
-          Sign-In
-        </button>
-        <button
-          className="signupButton"
-          onClick={() => {
-            navigate("/signup");
-          }}
-        >
-          Sign-Up
-        </button>
+        <div className="buttons">
+          {token ? (
+            <div className="buttonSign">
+              <button
+                className="buttonSignOut"
+                onClick={() => {
+                  setUser(null);
+                }}
+              >
+                Log Out
+              </button>
+            </div>
+          ) : (
+            <div className="buttonSign">
+              <button
+                className="signinButton"
+                onClick={() => {
+                  navigate("/signin");
+                }}
+              >
+                Sign-In
+              </button>
+              <button
+                className="signupButton"
+                onClick={() => {
+                  navigate("/signup");
+                }}
+              >
+                Sign-Up
+              </button>
+            </div>
+          )}
+        </div>
       </header>
     </div>
   );

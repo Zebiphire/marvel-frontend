@@ -5,10 +5,12 @@ import "../css/ButtonFavorite.css";
 
 import "../css/SpecificCharacter.css";
 
-const SpecificCharacter = () => {
+const SpecificCharacter = ({ token }) => {
   const { id } = useParams();
   const [character, setCharacter] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  // const [idFavorite, setIdFavorite] = useState("");
+  // const [categoryFavorite, setCategoryFavorite] = useState("");
 
   const navigate = useNavigate();
 
@@ -23,6 +25,45 @@ const SpecificCharacter = () => {
     fetchData();
   }, [id]);
 
+  // const setFavorite = (id, category) => {
+  //   setIdFavorite(id);
+  //   setCategoryFavorite(category);
+  // };
+
+  const SendFavorite = async (id, categoryFavorite) => {
+    if (
+      id === "" ||
+      id === undefined ||
+      categoryFavorite === undefined ||
+      categoryFavorite === ""
+    ) {
+      return;
+    } else {
+      try {
+        const response = await axios.post(
+          `https://marvel-api-nodejs.herokuapp.com/favorites/save`,
+          {
+            id: id,
+            category: categoryFavorite,
+          },
+          {
+            headers: {
+              authorization: "Bearer " + token,
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
+        if (response.data.error) {
+          return alert(response.data.error);
+        }
+      } catch (error) {
+        console.log(error);
+        setIsLoading(false);
+      }
+      setIsLoading(false);
+    }
+  };
+
   return isLoading ? (
     <span>En cours de chargement... </span>
   ) : (
@@ -31,7 +72,13 @@ const SpecificCharacter = () => {
         <div>See all characters</div>
       </Link>
       <h1>{character.name}</h1>
-      <button class="button-82-pushable" role="button">
+      <button
+        class="button-82-pushable"
+        role="button"
+        onClick={async () => {
+          SendFavorite(id, "character");
+        }}
+      >
         <span class="button-82-shadow"></span>
         <span class="button-82-edge"></span>
         <span class="button-82-front text">Add to favorite</span>

@@ -1,0 +1,28 @@
+.search {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex: 4;
+}
+
+.inputSearch {
+  width: 590px;
+  padding-left: 40px;
+  background-color: #f5f6f7;
+  border-radius: 5px;
+  height: 37px;
+  border: none;
+  font-size: 16px;
+}
+
+.inputSearch::placeholder {
+  color: #6c6d6d;
+  font-size: 16px;
+}
+
+.InputLogo {
+  position: absolute;
+  left: 7px;
+  top: 12px;
+  color: #bbbbbb;
+}
