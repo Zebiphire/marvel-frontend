@@ -13,8 +13,8 @@ const SpecificComics = ({ token }) => {
       console.log("id ==", id);
       let characterId = id;
       const response = await axios.get(
-        // `https://marvel-api-nodejs.herokuapp.com/comics/${characterId}`
-        `https://marvel-api-nodejs.herokuapp.com/comics/5fcf91f4d8a2480017b91453`
+        `https://marvel-api-nodejs.herokuapp.com/comics/${characterId}`
+        // `https://marvel-api-nodejs.herokuapp.com/comics/5fcf91f4d8a2480017b91453`
       );
       console.log("response ==", response);
       setData(response.data);
