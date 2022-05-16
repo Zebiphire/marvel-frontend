@@ -1,9 +1,9 @@
 import "../css/ButtonFavorite.css";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const Comics = ({ data, token }) => {
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
 
   const SendFavorite = async (id, categoryFavorite) => {
     console.log(id);
@@ -41,7 +41,7 @@ const Comics = ({ data, token }) => {
   return (
     <div
       className="containerComics"
-      onClick={() => navigate(`specificcomics/${data._id}`)}
+      // onClick={() => navigate(`specificcomics/${data._id}`)}
     >
       <h3>{data.title}</h3>
       <p>{data.description}</p>

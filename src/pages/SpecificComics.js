@@ -28,35 +28,35 @@ const SpecificComics = ({ token }) => {
       <p>Loading</p>
     </div>
   ) : (
-    <div className="contain">
-      {/* <p className="titre-comics-id">{data.name}</p>
+    <div className="containerComics">
+      <p className="comicsId">{data.name}</p>
 
       <img
         className="contain-img "
         src={data.thumbnail.path + "." + data.thumbnail.extension}
-        alt="comicId"
+        alt="comicsImg"
       />
       <div>
         <div>
-          <p>Comics with this specific character</p>
+          <p>Comics with this specific character :</p>
         </div>
 
         {data.comics.map((comic, index) => {
           return (
-            <div className="contain" key={comic._id}>
-              <div className="titre-div-comicid">
-                <p className="titre-comics-id">{comic.title}</p>
+            <div className="containerComics" key={comic._id}>
+              <div className="comicsId">
+                <p className="titleComics">{comic.title}</p>
               </div>
 
               <img
                 className="contain-img "
                 src={comic.thumbnail.path + "." + comic.thumbnail.extension}
-                alt="comicbyid"
+                alt="comicsImg"
               />
             </div>
           );
         })}
-      </div> */}
+      </div>
     </div>
   );
 };
