@@ -65,7 +65,7 @@ const Favorites = ({ token }) => {
   };
 
   return isLoading ? (
-    <span>En cours de chargement... </span>
+    <span>Loading... </span>
   ) : (
     <div>
       <h2>Favorites</h2>

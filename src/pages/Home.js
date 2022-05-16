@@ -5,7 +5,7 @@ import "../css/Home.css";
 
 const Home = ({ data, isLoading, setSearch, page, setPage }) => {
   return isLoading ? (
-    <span>En cours de chargement... </span>
+    <span>Loading... </span>
   ) : (
     <div>
       <div className="containerHome">

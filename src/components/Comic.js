@@ -1,7 +1,10 @@
 import "../css/ButtonFavorite.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Comics = ({ data, token }) => {
+  let navigate = useNavigate();
+
   const SendFavorite = async (id, categoryFavorite) => {
     console.log(id);
     if (
@@ -36,7 +39,10 @@ const Comics = ({ data, token }) => {
   };
 
   return (
-    <div className="containerComics">
+    <div
+      className="containerComics"
+      onClick={() => navigate(`specificcomics/${data._id}`)}
+    >
       <h3>{data.title}</h3>
       <p>{data.description}</p>
       <img

@@ -26,8 +26,8 @@ const Pagination = ({ data, page, setPage }) => {
         <>
           <a
             href="/"
-            onClick={(e) => {
-              e.preventDefault();
+            onClick={(event) => {
+              event.preventDefault();
               setPage(1);
             }}
           >
@@ -42,8 +42,8 @@ const Pagination = ({ data, page, setPage }) => {
             href="/"
             key={i}
             className={`page ${page === nextPage && "current"}`}
-            onClick={(e) => {
-              e.preventDefault();
+            onClick={(event) => {
+              event.preventDefault();
 
               if (page === nextPage) {
                 return;
@@ -62,8 +62,8 @@ const Pagination = ({ data, page, setPage }) => {
           ...{" "}
           <a
             href="/"
-            onClick={(e) => {
-              e.preventDefault();
+            onClick={(event) => {
+              event.preventDefault();
               setPage(maxPages);
             }}
           >

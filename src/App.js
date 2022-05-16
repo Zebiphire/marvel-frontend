@@ -9,6 +9,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Comics from "./pages/Comics";
 import SpecificCharacter from "./pages/SpecificCharacter";
+import SpecificComics from "./pages/SpecificComics";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Favorite from "./pages/Favorites";
@@ -69,6 +70,10 @@ function App() {
         <Route
           path="/specific/:id"
           element={<SpecificCharacter token={token} />}
+        />
+        <Route
+          path="comics/specificcomics/:id"
+          element={<SpecificComics token={token} />}
         />
         <Route path="/signin" element={<SignIn setUser={setUser} />} />
         <Route path="/signup" element={<SignUp setUser={setUser} />} />

@@ -55,7 +55,7 @@ const SpecificCharacter = ({ token }) => {
   };
 
   return isLoading ? (
-    <span>En cours de chargement... </span>
+    <span>Loading... </span>
   ) : (
     <section className="character">
       <Link to="/" className="previous">
